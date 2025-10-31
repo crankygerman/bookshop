@@ -27,7 +27,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - uses: ./.github/actions/cf-setup # cap-js/cf-setup@v1
+      - uses: cap-js/cf-setup@v1
         with:
           cf-api: ${{ vars.CF_API }}
           cf-org: ${{ vars.CF_ORG }}
