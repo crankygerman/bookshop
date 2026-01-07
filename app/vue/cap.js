@@ -59,7 +59,7 @@ export class ServiceClient {
 const _fetchCsrfToken = async () => {
   if(document.csrfToken === undefined) {
     let res = await fetch('/', { method: 'HEAD', headers: { 'x-csrf-token': 'fetch' } })
-    if(!res.ok) throw new Error(`Could not fetch CSRF token ${r.status}: ${r.statusText}`)
+    if(!res.ok) throw new Error(`Could not fetch CSRF token ${res.status}: ${res.statusText}`)
     document.csrfToken = res.headers.get('x-csrf-token')
   }
   return document.csrfToken

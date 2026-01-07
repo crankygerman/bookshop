@@ -13,8 +13,7 @@
     "@cap-js/sqlite": ">=1"
   },
   "dependencies": {
-    "@sap/cds": ">=7",
-    "express": "^4.17.1"
+    "@sap/cds": ">=7"
   },
   "scripts": {
     "start": "cds-serve",

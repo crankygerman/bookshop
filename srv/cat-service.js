@@ -1,5 +1,4 @@
 const cds = require('@sap/cds')
-const SELECT = require('@sap/cds/lib/ql/SELECT')
 
 class CatalogService extends cds.ApplicationService { init() {
 
