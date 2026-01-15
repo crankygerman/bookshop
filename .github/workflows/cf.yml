@@ -23,8 +23,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: 22
       - uses: cap-js/cf-setup@v1
@@ -35,7 +35,7 @@ jobs:
           cf-username: ${{ vars.CF_USERNAME }}
           cf-password: ${{ secrets.CF_PASSWORD }}
       - run: npm add -D @sap/cds-dk
-      - run: npx cds add hana
+      - run: npx cds add hana,xsuaa
       - run: npm install
       - run: npx cds up
 
